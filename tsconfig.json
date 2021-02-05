@@ -9,11 +9,11 @@
     "strictPropertyInitialization": false,                             
     "esModuleInterop": true,       
     "baseUrl": "./src",           
-    "paths": {
-        "@modules/*":["modules/*"],
-        "@config/*":["config/*"],
-        "@shared/*":["shared/*"]
-    },
+    //"paths": {
+      //  "@modules/*":["modules/*"],
+       // "@config/*":["config/*"],
+        //"@shared/*":["shared/*"]
+    //},
      "experimentalDecorators": true,       
     "emitDecoratorMetadata": true,    
     "skipLibCheck": true,                    
