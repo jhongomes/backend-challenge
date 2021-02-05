@@ -5,6 +5,7 @@ import PlacesRepository from "../repositories/PlacesRepository";
 import CreatePlacesService from "../services/CreatePlacesService";
 import UpdatePlacesService from "../services/UpdatePlacesService";
 import DeletePlacesService from "../services/DeletePlacesService";
+import placesRouter from 'routes/places';
 
 class PlacesController{
 
@@ -15,6 +16,15 @@ class PlacesController{
 
         return response.json(places);
 
+
+    }
+    public async findByInd( request: Request, response: Response): Promise<Response>{
+        const { id } = request.params;
+        const placesRepository= new PlacesRepository();
+        const places = await placesRepository.FindById(id);
+
+
+        return response.json(places);
 
     }
 
