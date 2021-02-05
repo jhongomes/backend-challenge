@@ -8,6 +8,6 @@ const placesController = new PlacesController();
 
 
 placesRouter.post('/', placesController.create);
-
+placesRouter.get('/', placesController.listar);
 
 export default placesRouter;

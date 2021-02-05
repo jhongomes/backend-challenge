@@ -8,6 +8,16 @@ import CreatePlacesService from "../services/CreatePlacesService";
 
 class PlacesController{
 
+    public async listar(request: Request, response: Response): Promise<Response>{
+
+        const placesRepository = new PlacesRepository();
+        const places = await placesRepository.listar();
+
+        return response.json(places);
+
+
+    }
+
 
     public async create(request: Request, response: Response): Promise<Response>{
         const { país, local, meta, url } = request.body;
