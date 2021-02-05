@@ -4,7 +4,7 @@ import Places from "../models/Places";
 import PlacesRepository from "../repositories/PlacesRepository";
 import CreatePlacesService from "../services/CreatePlacesService";
 import UpdatePlacesService from "../services/UpdatePlacesService";
-
+import DeletePlacesService from "../services/DeletePlacesService";
 
 class PlacesController{
 
@@ -49,7 +49,24 @@ class PlacesController{
             meta,
         });
         return response.status(201).json(place);
+    }// fim update
+
+
+
+    public async Delete( request: Request, response: Response): Promise<Response>{
+        const { id } = request.params;
+        const placesRepository = new PlacesRepository();
+        const deletePlace = new DeletePlacesService(placesRepository);
+    
+        const places = await deletePlace.execute({
+            id,
+        });
+
+
+        return response.send();
     }
+
+
 
 }
 export default PlacesController;
