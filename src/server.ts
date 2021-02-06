@@ -1,3 +1,4 @@
+
 import 'express-async-errors';
 import 'reflect-metadata';
 import express, { Request, Response, NextFunction } from 'express';
@@ -11,6 +12,8 @@ import routes from './routes'
 const app = express();
 app.use(express.json())
 app.use(routes);
+routes.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
+
 
 app.use((err: Error, resquest: Request, response: Response, _:NextFunction)=>{
 
