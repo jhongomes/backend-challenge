@@ -55,3 +55,29 @@ Os dados a ser considerados são:
 - Em caso do deploy realizado, a url deverá ser adicionada no README;
 - O prazo de entrega para este desafio é de 2 (duas) semanas, contando a partir do dia em que o canditado recebeu o email com o link do repositório;
 - Ao finalizar o desafio, o candidato deverá enviar um email para jobs@clubpetro.com.br contendo o link do seu PR.
+
+### 🚀 Tecnologias
+
+Este projeto foi desenvolvido com as seguintes tecnologias:
+ 
+- Nodejs
+- Express
+- Typescript
+- TypeORM
+- Docker
+- VS Code com EditorConfig e ESlint
+
+### ❗ Como usar
+
+Para clonar e executar esse projeto, você precisa do Git, Nodejs v12.16 ou superior + Yarn 1.22 ou superior instalado no seu computador. Digite na sua linha de comando:
+
+``` bash
+
+    # Clonar o repositório
+    $ git clone https://github.com/jhongomes/backend-challenge.git
+
+    # Entrar no repositório
+    $ cd backend-challenge
+
+    # Instalar as dependências 
+    $ yarn
