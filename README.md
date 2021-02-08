@@ -8,7 +8,7 @@
   - [Requisitos Obrigatórios](#requisitos-obrigatórios)
   - [Bônus](#bônus)
 - [Submissão e Prazo de Entrega](#submissão-e-prazo-de-entrega)
-- [Tecnologias](#tecnologias)
+
 
 ## Descrição
 
@@ -121,12 +121,12 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - Selecione o banco PostgresSQL. Depois > Next
 
 
-<img src="./img/passo1.png" alt="Desafio" >
+<img src="./img/passo1.png">
 
 -  Preencha conforme a imagem a seguir. 
 - Observação: Preencha o campo host conforme a conexão estabelecida pela sua máquina e sua senha conforme sua configuração. Depois > Finish
 
-<img src="./img/passo2.png" alt="Desafio" >
+<img src="./img/passo2.png">
 
 - Se a resposta for igual a imagem a seguir a conexão entre o docker e o DBevear está estabelecida.
 
@@ -158,29 +158,31 @@ $ yarn typeorm migration:run
 http://localhost:3333/uploads/brasil.svg ou http://localhost:3333/uploads/uruguai.svg.
 
 
-> - POST /places : O corpo da requisição deve receber país, local, meta e url. Ex:
+> - <strong>POST /places</strong> : O corpo da requisição deve receber <strong>país</strong>, <strong>local</strong>, <strong>meta</strong> e <strong>url</strong>. Ex:
 
-<img src="./img/cad.png" alt="" >
+<img src="./img/cad.png" alt="isomnia">
 
 ---
 
-> - GET /places: Rota que lista todos os lugares cadastrados na Api. Ex:
+> - <strong>GET /places</strong>: Rota que lista todos os lugares cadastrados na Api. Ex:
 
 <img src="./img/listar.png" alt="" >
 
 ---
-> - GET /places/id: Rota retorna os dados de uma lugar específico. Deve ser passado por parâmetro o id do tipo uuid. Ex:
+> - <strong>GET /places/id</strong>: Rota retorna os dados de uma lugar específico. Deve ser passado por parâmetro o <strong>id</strong> do tipo <strong>uuid</strong>. Ex:
 
 <img src="./img/getId.png" alt="" >
 
 ---
-> - PUT /places/id : Rota deve alterar somente os campos 'local' e 'meta' referente ao id passado por parâmetro
+> - PUT /places/id : Rota deve alterar somente os campos <strong>local</strong> e 'meta' referente ao <strong>id</strong> passado por parâmetro
 
 
 <img src="./img/update.png" alt="" >
 
 ---
-> - DELETE /places/id : O lugar com id passado por parâmentro deve ser excluido e retornar somente um status 200. Ex:
 
-<img src="./img/delete.png" alt="" >
+> - <strong>DELETE /places/id</strong> : O lugar com 
+ <strong>id</strong> passado por parâmentro deve ser excluido e retornar somente um status 200. Ex:
+
+<img src="./img/delete.png" alt="Desafio" >
 
