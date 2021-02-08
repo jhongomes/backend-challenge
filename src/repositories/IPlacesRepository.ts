@@ -1,5 +1,5 @@
 import ICreatePlacesDTO from '../Dtos/ICreatePlacesDTO';
-import Places from '../models/Places';
+import Places from '../entities/Places';
 
 
 export default interface IPlacesRepository{

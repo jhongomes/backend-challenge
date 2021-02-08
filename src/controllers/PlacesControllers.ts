@@ -1,11 +1,12 @@
 import { Request, Response }  from 'express';
-import Places from "../models/Places";
+import Places from "../entities/Places";
 
 import PlacesRepository from "../repositories/PlacesRepository";
 import CreatePlacesService from "../services/CreatePlacesService";
 import UpdatePlacesService from "../services/UpdatePlacesService";
 import DeletePlacesService from "../services/DeletePlacesService";
 import placesRouter from 'routes/places';
+import { format } from 'date-fns';
 
 class PlacesController{
 
@@ -39,7 +40,7 @@ class PlacesController{
             país,
             local,
             meta,
-            url,
+            url, 
         });
         return response.status(201).json(places);
 

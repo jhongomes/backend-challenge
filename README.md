@@ -8,6 +8,7 @@
   - [Requisitos Obrigatórios](#requisitos-obrigatórios)
   - [Bônus](#bônus)
 - [Submissão e Prazo de Entrega](#submissão-e-prazo-de-entrega)
+- [Tecnologias](#tecnologias)
 
 ## Descrição
 
@@ -57,19 +58,20 @@ Os dados a ser considerados são:
 - Ao finalizar o desafio, o candidato deverá enviar um email para jobs@clubpetro.com.br contendo o link do seu PR.
 
 ### 🚀 Tecnologias
-
+---
 Este projeto foi desenvolvido com as seguintes tecnologias:
  
-- Nodejs
+- [Nodejs](https://nodejs.org/en/)
 - Express
 - Typescript
-- TypeORM
-- Docker
-- VS Code com EditorConfig e ESlint
+- [TypeORM](https://typeorm.io/#/)
+- [Docker](https://www.docker.com/)
+- [VS Code](https://code.visualstudio.com/) com [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) e [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ### ❗ Como usar
+---
 
-Para clonar e executar esse projeto, você precisa do Git, Nodejs v12.16 ou superior + Yarn 1.22 ou superior instalado no seu computador. Digite na sua linha de comando:
+>Para clonar e executar esse projeto, você precisa do [Git](https://git-scm.com/), [Nodejs v12.16](https://nodejs.org/en/) ou superior + [Yarn 1.22](https://yarnpkg.com/) ou superior  instalado no seu computador. Digite na sua linha de comando:
 
 ``` bash
 
@@ -81,3 +83,104 @@ Para clonar e executar esse projeto, você precisa do Git, Nodejs v12.16 ou supe
 
     # Instalar as dependências 
     $ yarn
+
+    # Abrir projeto 
+    $ code .
+
+
+``` 
+### 🔗 Banco de dados
+---
+ >Para estabelecer uma conexão com o banco, você precisa de [Docker v19.03](http://docs.docker.oeynet.com/toolbox/toolbox_install_windows/) ou superior instalado no seu computador. Digite na sua linha de comando:
+
+ ``` bash
+    # Criar uma imagem do postgres com docker
+    $ docker run --name BACKEND -e POSTGRES_PASSWORD=docker -p  5432:5432 -d postgres
+    
+    # Executar o banco
+    $ docker start BACKEND
+
+    # Verificar a url host de conexão
+    $ docker-machine ls
+
+    # Configurar a url listada no comando acima dentro do 'ormconfig.json' do projeto backend
+    ex url: 192.168.99.108
+
+    # Execute o projeto
+    $ yarn dev
+
+
+
+    
+
+``` 
+### 💬 DBevear
+---
+> Para gerir uma administração das tabelas que serão migradas do projeto para o banco, você precise de [DBevear v7.2](https://dbeaver.io/download/) ou superior. Abra a interface e configure conforme as instruções a seguir:
+
+- Selecione o banco PostgresSQL. Depois > Next
+
+
+<img src="./img/passo1.png" alt="Desafio" >
+
+-  Preencha conforme a imagem a seguir. 
+- Observação: Preencha o campo host conforme a conexão estabelecida pela sua máquina e sua senha conforme sua configuração. Depois > Finish
+
+<img src="./img/passo2.png" alt="Desafio" >
+
+- Se a resposta for igual a imagem a seguir a conexão entre o docker e o DBevear está estabelecida.
+
+<img src="./img/passo3.png" alt="Desafio" >
+
+---
+
+### 📁 Migrations
+
+> Para migrar a tabela existente no projeto para o DBevear, execute o comando no terminal do seu editor:
+
+```
+$ yarn typeorm migration:run
+```
+---
+### 🟣 Insomnia
+
+> Para testar a API desenvolvida você precisa de [Insomnia v7.1](https://insomnia.rest/) ou superior instalado no seu computador.
+
+``` bash
+  # Gerenciar ambiente com a rota
+  $ { "baseUrl": "http://localhost:3333"  }
+```
+---
+### Recursos para cadastrar as requisições
+
+---
+ Rota estática disponível para campo url. É importante constar que a somente alguns nomes de países disponivel no arquivo uploads. Com isto, deixo claro que é necessário colocar no final da rota o nome do país. Ex:
+http://localhost:3333/uploads/brasil.svg ou http://localhost:3333/uploads/uruguai.svg.
+
+
+> - POST /places : O corpo da requisição deve receber país, local, meta e url. Ex:
+
+<img src="./img/cad.png" alt="" >
+
+---
+
+> - GET /places: Rota que lista todos os lugares cadastrados na Api. Ex:
+
+<img src="./img/listar.png" alt="" >
+
+---
+> - GET /places/id: Rota retorna os dados de uma lugar específico. Deve ser passado por parâmetro o id do tipo uuid. Ex:
+
+<img src="./img/getId.png" alt="" >
+
+---
+> - PUT /places/id : Rota deve alterar somente os campos 'local' e 'meta' referente ao id passado por parâmetro
+
+
+<img src="./img/update.png" alt="" >
+
+---
+> - DELETE /places/id : O lugar com id passado por parâmentro deve ser excluido e retornar somente um status 200. Ex:
+
+<img src="./img/delete.png" alt="" >
+

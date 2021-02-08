@@ -1,5 +1,5 @@
 import AppError from "../errors/AppError";
-import Places from "../models/Places";
+import Places from "../entities/Places";
 import IPlacesRepository from "../repositories/IPlacesRepository";
 
 
