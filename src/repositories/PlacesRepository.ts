@@ -1,6 +1,6 @@
 import IPlacesRepository from '../repositories/IPlacesRepository'
 import ICreatePlacesDTO from '../Dtos/ICreatePlacesDTO';
-import Place from "../models/Places";
+import Place from "../entities/Places";
 import { getRepository, Repository} from 'typeorm';
 
 
