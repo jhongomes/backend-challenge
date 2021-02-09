@@ -62,8 +62,8 @@ Os dados a ser considerados são:
 Este projeto foi desenvolvido com as seguintes tecnologias:
  
 - [Nodejs](https://nodejs.org/en/)
-- Express
-- Typescript
+- [Express](http://expressjs.com/pt-br/)
+- [Typescript](https://docs.microsoft.com/pt-br/archive/msdn-magazine/2015/january/typescript-understanding-typescript)
 - [TypeORM](https://typeorm.io/#/)
 - [Docker](https://www.docker.com/)
 - [VS Code](https://code.visualstudio.com/) com [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) e [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -130,7 +130,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 - Se a resposta for igual a imagem a seguir a conexão entre o docker e o DBevear está estabelecida.
 
-<img src="./img/passo3.png" alt="Desafio" >
+<img src="./img/passo3.png" alt="Desafio">
 
 ---
 
@@ -186,3 +186,5 @@ http://localhost:3333/uploads/brasil.svg ou http://localhost:3333/uploads/urugua
 
 <img src="./img/delete.png" alt="Desafio" >
 
+---
+Feito por:  Jhonatan Gomes ! 
